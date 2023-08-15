@@ -1,4 +1,4 @@
-package com.gridnine.testing.model;
+package com.gridnine.testing;
 
 
 import java.util.List;

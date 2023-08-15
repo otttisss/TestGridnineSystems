@@ -1,6 +1,4 @@
-package com.gridnine.testing.filtration;
-
-import com.gridnine.testing.model.Flight;
+package com.gridnine.testing;
 
 import java.util.List;
 
