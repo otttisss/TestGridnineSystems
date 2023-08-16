@@ -2,6 +2,7 @@ package com.gridnine.testing;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DepartureBefore implements FlightFilter {
     @Override
@@ -9,6 +10,7 @@ public class DepartureBefore implements FlightFilter {
         LocalDateTime currentTime = LocalDateTime.now();
 
         return flights.stream().filter(flight -> flight.getSegments().stream()
-                .allMatch(segment -> segment.getDepartureDate().isAfter(currentTime))).toList();
+                .allMatch(segment -> segment.getDepartureDate().isAfter(currentTime)))
+                .collect(Collectors.toList());
     }
 }
