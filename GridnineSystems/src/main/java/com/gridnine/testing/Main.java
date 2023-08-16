@@ -15,5 +15,10 @@ public class Main {
         List<Flight> filteredArrival = arrivalBefore.filterFlights(flights);
         System.out.println("Flights arrival before current time: ");
         filteredArrival.forEach(System.out::println);
+
+        FlightFilter overTwoHours = new OverTwoHoursOnEarth();
+        List<Flight> filteredOverTwoHours = overTwoHours.filterFlights(flights);
+        System.out.println("Flights after two hours: ");
+        filteredOverTwoHours.forEach(System.out::println);
     }
 }
