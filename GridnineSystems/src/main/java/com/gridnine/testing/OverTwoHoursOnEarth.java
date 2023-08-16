@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+// Этот класс реализует фильтр, который исключает из списка перелётов те,
+// у которых общее время, проведённое на земле между сегментами, превышает два часа.
+
 public class OverTwoHoursOnEarth implements FlightFilter {
     @Override
     public List<Flight> filterFlights(List<Flight> flights) {

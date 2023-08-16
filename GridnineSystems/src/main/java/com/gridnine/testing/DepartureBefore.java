@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Этот класс реализует фильтр, который исключает из списка перелётов все те,
+// у которых дата вылета раньше текущего момента времени.
+
 public class DepartureBefore implements FlightFilter {
     @Override
     public List<Flight> filterFlights(List<Flight> flights) {
